@@ -81,7 +81,9 @@ export async function getNgos(): Promise<Ngo[]> {
 
             const district = officialAddress.split(",").pop()!;
 
-            const trimmedDistrict = district.trim().split(" ")[0];
+            // remove white space and any full stops.
+            // Also remove the numbers for Colombo district
+            const trimmedDistrict = district.trim().replace(/\.$/, "").split(" ")[0];
 
             const province = districtMap.get(trimmedDistrict.toLowerCase());
 
