@@ -33,15 +33,15 @@ export function DataTable<TData, TValue>({ columns, data }: DataTableProps<TData
         columns,
         onSortingChange: setSorting,
         getCoreRowModel: getCoreRowModel(),
-        // getPaginationRowModel: getPaginationRowModel(),
+        getPaginationRowModel: getPaginationRowModel(),
         getSortedRowModel: getSortedRowModel(),
         getFilteredRowModel: getFilteredRowModel(),
         onGlobalFilterChange: setGlobalFilter,
         initialState: {
-            // pagination: {
-            //     pageIndex: 0,
-            //     pageSize: 50
-            // }
+            pagination: {
+                pageIndex: 0,
+                pageSize: 50
+            }
         },
         state: {
             sorting,
