@@ -28,8 +28,16 @@ export const columns: ColumnDef<Ngo>[] = [
         header: ({ column }) => <DataTableColumnHeader column={column} title="Email" />
     },
     {
-        accessorKey: "address",
+        accessorKey: "officialAddress",
         header: ({ column }) => <DataTableColumnHeader column={column} title="Official Address" />
+    },
+    {
+        accessorKey: "district",
+        header: ({ column }) => <DataTableColumnHeader column={column} title="District" />
+    },
+    {
+        accessorKey: "province",
+        header: ({ column }) => <DataTableColumnHeader column={column} title="Province" />
     },
     {
         accessorKey: "country",
